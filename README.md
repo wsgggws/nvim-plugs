@@ -2,13 +2,12 @@
 
 基于 lazy.nvim 的配置
 
-
 ## 支持的语言
 
 - Python
 - Go
 - Rust
-- Toml, Yaml. HTML, Markdown...
+- Sh, Lua, Toml, Yaml. HTML, Markdown...
 
 ## 支持的功能
 
