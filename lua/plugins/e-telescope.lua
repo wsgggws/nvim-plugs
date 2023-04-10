@@ -20,12 +20,6 @@ return {
 				end,
 				desc = "Find Plugin File",
 			},
-			-- This is using b because it used to be fzf's :Buffers
-			{
-				"<leader>b",
-				"<cmd>Telescope oldfiles<cr>",
-				desc = "Recent",
-			},
 		},
 	},
 }

@@ -6,7 +6,19 @@ return {
 	{ "plasticboy/vim-markdown" },
 
 	-- terminal
-	{ "akinsho/toggleterm.nvim", version = "*", config = true },
+	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		config = true,
+		keys = {
+			{ "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "ToggleTerm" },
+			{ "<leader>th", "<cmd>ToggleTerm direction=horizontal size=13<cr>", desc = "ToggleTerm bottom" },
+			{ "<leader>tv", "<cmd>ToggleTerm direction=vertical size=58<cr>", desc = "ToggleTerm right" },
+			{ "<leader>tl", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "ToggleTerm current line" },
+			{ "<leader>ts", "<cmd>ToggleTermSendVisualSelection<cr>", desc = "ToggleTerm visual selection" },
+			{ "<leader>tT", "<cmd>ToggleTerm direction=tab<cr>", desc = "ToggleTerm tab" },
+		},
+	},
 
 	-- code_runner
 	{
