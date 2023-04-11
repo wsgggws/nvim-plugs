@@ -34,9 +34,12 @@ return {
 		---@type TSConfig
 		opts = {
 			highlight = { enable = true },
-			indent = { enable = true, disable = { "python" } },
+			indent = { enable = true },
 			context_commentstring = { enable = true, enable_autocmd = false },
 			ensure_installed = {
+				"python",
+				"go",
+				"rust",
 				"bash",
 				"c",
 				"html",
@@ -46,15 +49,12 @@ return {
 				"luap",
 				"markdown",
 				"markdown_inline",
-				"python",
 				"query",
 				"regex",
 				"tsx",
 				"typescript",
 				"vim",
 				"yaml",
-				"go",
-				"rust",
 			},
 			incremental_selection = {
 				enable = true,
