@@ -32,4 +32,21 @@ return {
 			},
 		},
 	},
+	{
+		"telescope.nvim",
+		-- enable telescope project
+		dependencies = {
+			"nvim-telescope/telescope-project.nvim",
+			config = function()
+				require("telescope").load_extension("project")
+			end,
+		},
+		keys = {
+			{
+				"<leader>pp",
+				"<cmd>Telescope project<CR>",
+				desc = "Find project list",
+			},
+		},
+	},
 }

@@ -19,12 +19,13 @@ return {
 				["<leader>f"] = { name = "+file/find" },
 				["<leader>g"] = { name = "+git" },
 				["<leader>gh"] = { name = "+hunks" },
-				["<leader>t"] = { name = "+toggleterm" },
-				["<leader>r"] = { name = "+run" },
 				["<leader>s"] = { name = "+search" },
 				["<leader>u"] = { name = "+ui" },
 				["<leader>w"] = { name = "+windows" },
 				["<leader>x"] = { name = "+diagnostics/quickfix" },
+				["<leader>t"] = { name = "+toggleterm" },
+				["<leader>r"] = { name = "+run" },
+				["<leader>p"] = { name = "+project" },
 				["<leader>q"] = { name = "+quit/session" },
 			}
 			wk.register(keymaps)

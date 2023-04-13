@@ -12,8 +12,8 @@ return {
 		config = true,
 		keys = {
 			{ "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "ToggleTerm" },
-			{ "<leader>th", "<cmd>ToggleTerm direction=horizontal size=13<cr>", desc = "ToggleTerm bottom" },
-			{ "<leader>tv", "<cmd>ToggleTerm direction=vertical size=58<cr>", desc = "ToggleTerm right" },
+			{ "<leader>th", "<cmd>ToggleTerm direction=horizontal size=15<cr>", desc = "ToggleTerm bottom" },
+			{ "<leader>tv", "<cmd>ToggleTerm direction=vertical size=60<cr>", desc = "ToggleTerm right" },
 			{ "<leader>tl", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "ToggleTerm current line" },
 			{ "<leader>ts", "<cmd>ToggleTermSendVisualSelection<cr>", desc = "ToggleTerm visual selection" },
 			{ "<leader>tT", "<cmd>ToggleTerm direction=tab<cr>", desc = "ToggleTerm tab" },
