@@ -1,9 +1,23 @@
 return {
+	{ "mhinz/vim-startify" },
+
 	{ "tpope/vim-surround" },
 
 	-- markdown support
 	{ "godlygeek/tabular" }, -- required by vim-markdown
 	{ "plasticboy/vim-markdown" },
+
+	{ "airblade/vim-rooter" },
+
+	{ "kshenoy/vim-signature" },
+
+	{
+		"simrat39/symbols-outline.nvim",
+		version = "*",
+		cmd = "SymbolsOutline",
+		keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
+		config = true,
+	},
 
 	-- terminal
 	{
@@ -12,8 +26,8 @@ return {
 		config = true,
 		keys = {
 			{ "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "ToggleTerm" },
-			{ "<leader>th", "<cmd>ToggleTerm direction=horizontal size=15<cr>", desc = "ToggleTerm bottom" },
-			{ "<leader>tv", "<cmd>ToggleTerm direction=vertical size=60<cr>", desc = "ToggleTerm right" },
+			{ "<leader>th", "<cmd>ToggleTerm direction=horizontal size=14<cr>", desc = "ToggleTerm bottom" },
+			{ "<leader>tv", "<cmd>ToggleTerm direction=vertical size=52<cr>", desc = "ToggleTerm right" },
 			{ "<leader>tl", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "ToggleTerm current line" },
 			{ "<leader>ts", "<cmd>ToggleTermSendVisualSelection<cr>", desc = "ToggleTerm visual selection" },
 			{ "<leader>tT", "<cmd>ToggleTerm direction=tab<cr>", desc = "ToggleTerm tab" },

@@ -20,16 +20,6 @@ return {
 				end,
 				desc = "Find Plugin File",
 			},
-			{
-				"<leader>fw",
-				"<cmd>Telescope grep_string<CR>",
-				desc = "Find Cursor Word",
-			},
-			{
-				"<leader>fs",
-				"<cmd>Telescope live_grep<CR>",
-				desc = "Find Live Grep",
-			},
 		},
 	},
 	{
@@ -45,7 +35,7 @@ return {
 			{
 				"<leader>pp",
 				"<cmd>Telescope project<CR>",
-				desc = "Find project list",
+				desc = "Find projects",
 			},
 		},
 	},
