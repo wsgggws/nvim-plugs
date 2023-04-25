@@ -2,12 +2,18 @@
 
 基于 lazy.nvim 的配置
 
+## Prerequirement
+
+- npm or yarn
+- Python
+- Go
+
 ## 支持的语言
 
 - Python
 - Go
 - Rust
-- Sh, Lua, Toml, Yaml. HTML, Markdown...
+- Markdown, JSON, YAML, SHELL, LUA, HTML ...
 
 ## 支持的功能
 
