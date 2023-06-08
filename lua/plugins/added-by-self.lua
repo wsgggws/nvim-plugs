@@ -1,4 +1,95 @@
 return {
+	-- debug python
+	{
+		"mfussenegger/nvim-dap",
+		keys = {
+			{
+				"<leader>dd",
+				"<cmd>lua require('dap').toggle_breakpoint()<CR>",
+				desc = "Debug toggle toggle_breakpoint",
+			},
+			-- leader dn 可以直接开始 Debug, Nice
+			{
+				"<leader>dn",
+				"<cmd>lua require('dap').continue()<CR>",
+				desc = "Debug continue",
+			},
+			{
+				"<leader>di",
+				"<cmd>lua require('dap').step_into()<CR>",
+				desc = "Debug step into",
+			},
+			{
+				"<leader>dv",
+				"<cmd>lua require('dap').step_over()<CR>",
+				desc = "Debug step into",
+			},
+			{
+				"<leader>do",
+				"<cmd>lua require('dap').step_out()<CR>",
+				desc = "Debug step into",
+			},
+		},
+	},
+	{
+		"theHamsta/nvim-dap-virtual-text",
+		config = function(_, opts)
+			require("nvim-dap-virtual-text").setup(opts)
+		end,
+	},
+	{
+		"rcarriga/nvim-dap-ui",
+		config = function(_, opts)
+			require("dapui").setup(opts)
+		end,
+		keys = {
+			{
+				"<leader>du",
+				"<cmd>lua require('dapui').toggle()<CR>",
+				desc = "Debug toggle UI",
+			},
+			{
+				"<leader>dm",
+				"<cmd>lua require('dap-python').test_method()<CR>",
+				desc = "Debug test method",
+			},
+			{
+				"<leader>dc",
+				"<cmd>lua require('dap-python').test_class()<CR>",
+				desc = "Debug test class",
+			},
+		},
+	},
+	{
+		"mfussenegger/nvim-dap-python",
+		config = function(_, _)
+			require("dap-python").setup(os.getenv("MYPYTHON"))
+			require("dap-python").test_runner = "pytest"
+
+			table.insert(require("dap").configurations.python, {
+				type = "python",
+				request = "launch",
+				name = "Debug Poll Main",
+				cwd = os.getenv("CWD"),
+				program = os.getenv("PROGRAM"),
+				env = {
+					["PYTHONPATH"] = ".:crawler",
+					["DEFAULT_ENV_FOR_DYNACONF"] = "default",
+					["ROOT_PATH_FOR_DYNACONF"] = "config",
+					["NEW_RELIC_ENVIRONMENT"] = "development",
+					["ENV_FOR_DYNACONF"] = "development",
+					["CONFIG_CENTER_DEBUG"] = "true",
+					["CONFIG_CENTER_ENV"] = "development",
+					[os.getenv("KEY1")] = os.getenv("VALUE1"),
+					[os.getenv("KEY2")] = os.getenv("VALUE2"),
+					[os.getenv("KEY3")] = os.getenv("VALUE3"),
+					[os.getenv("KEY4")] = os.getenv("VALUE4"),
+				},
+				-- ... more options, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings
+			})
+		end,
+	},
+
 	{ "mhinz/vim-startify" },
 
 	{ "tpope/vim-surround" },
