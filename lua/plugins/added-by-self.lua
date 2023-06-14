@@ -22,12 +22,17 @@ return {
 			{
 				"<leader>dv",
 				"<cmd>lua require('dap').step_over()<CR>",
-				desc = "Debug step into",
+				desc = "Debug step over",
 			},
 			{
 				"<leader>do",
 				"<cmd>lua require('dap').step_out()<CR>",
-				desc = "Debug step into",
+				desc = "Debug step out",
+			},
+			{
+				"<leader>ds",
+				"<cmd>lua require('dap').stop()<CR>",
+				desc = "Debug stop",
 			},
 		},
 	},
@@ -86,6 +91,37 @@ return {
 					[os.getenv("KEY4")] = os.getenv("VALUE4"),
 				},
 				-- ... more options, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings
+			})
+		end,
+	},
+	{
+		"leoluz/nvim-dap-go",
+		config = function(_, _)
+			require("dap-go").setup({
+				dap_configurations = {
+					{
+						-- Must be "go" or it will be ignored by the plugin
+						type = "go",
+						name = "Attach remote",
+						mode = "remote",
+						request = "attach",
+					},
+				},
+				-- delve configurations
+				delve = {
+					-- the path to the executable dlv which will be used for debugging.
+					-- by default, this is the "dlv" executable on your PATH.
+					path = "dlv",
+					-- time to wait for delve to initialize the debug session.
+					-- default to 20 seconds
+					initialize_timeout_sec = 20,
+					-- a string that defines the port to start delve debugger.
+					-- default to string "${port}" which instructs nvim-dap
+					-- to start the process in a random available port
+					port = "${port}",
+					-- additional args to pass to dlv
+					args = {},
+				},
 			})
 		end,
 	},

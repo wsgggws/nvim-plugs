@@ -22,3 +22,4 @@
 - formater
 - runner
 - term
+- debug
