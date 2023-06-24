@@ -7,3 +7,5 @@ opt.autoindent = true
 opt.smartindent = true
 
 opt.termguicolors = true
+
+vim.fn.sign_define("DapBreakpoint", { text = "🛑", texthl = "", linehl = "", numhl = "" })

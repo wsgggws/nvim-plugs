@@ -8,9 +8,9 @@ return {
 				"<cmd>lua require('dap').toggle_breakpoint()<CR>",
 				desc = "Debug toggle toggle_breakpoint",
 			},
-			-- leader dn 可以直接开始 Debug, Nice
+			-- leader dc 可以直接开始 Debug, Nice
 			{
-				"<leader>dn",
+				"<leader>dc",
 				"<cmd>lua require('dap').continue()<CR>",
 				desc = "Debug continue",
 			},
@@ -20,19 +20,19 @@ return {
 				desc = "Debug step into",
 			},
 			{
-				"<leader>dv",
-				"<cmd>lua require('dap').step_over()<CR>",
-				desc = "Debug step over",
-			},
-			{
 				"<leader>do",
 				"<cmd>lua require('dap').step_out()<CR>",
 				desc = "Debug step out",
 			},
 			{
+				"<leader>dn",
+				"<cmd>lua require('dap').step_over()<CR>",
+				desc = "Debug step next or over",
+			},
+			{
 				"<leader>ds",
-				"<cmd>lua require('dap').stop()<CR>",
-				desc = "Debug stop",
+				"<cmd>lua require('dap').close()<CR>",
+				desc = "Debug close",
 			},
 		},
 	},
@@ -69,28 +69,46 @@ return {
 		"mfussenegger/nvim-dap-python",
 		config = function(_, _)
 			require("dap-python").setup(os.getenv("MYPYTHON"))
-			require("dap-python").test_runner = "pytest"
-
+			-- require("dap-python").setup("/opt/homebrew/bin/python3.9")
+			local crawler_env = {
+				["PYTHONPATH"] = ".:crawler",
+				["DEFAULT_ENV_FOR_DYNACONF"] = "default",
+				["ROOT_PATH_FOR_DYNACONF"] = "config",
+				["NEW_RELIC_ENVIRONMENT"] = "development",
+				["ENV_FOR_DYNACONF"] = "development",
+				["CONFIG_CENTER_DEBUG"] = "true",
+				["CONFIG_CENTER_ENV"] = "development",
+				[os.getenv("KEY1")] = os.getenv("VALUE1"),
+				[os.getenv("KEY2")] = os.getenv("VALUE2"),
+				[os.getenv("KEY3")] = os.getenv("VALUE3"),
+				[os.getenv("KEY4")] = os.getenv("VALUE4"),
+			}
 			table.insert(require("dap").configurations.python, {
 				type = "python",
 				request = "launch",
 				name = "Debug Poll Main",
 				cwd = os.getenv("CWD"),
 				program = os.getenv("PROGRAM"),
-				env = {
-					["PYTHONPATH"] = ".:crawler",
-					["DEFAULT_ENV_FOR_DYNACONF"] = "default",
-					["ROOT_PATH_FOR_DYNACONF"] = "config",
-					["NEW_RELIC_ENVIRONMENT"] = "development",
-					["ENV_FOR_DYNACONF"] = "development",
-					["CONFIG_CENTER_DEBUG"] = "true",
-					["CONFIG_CENTER_ENV"] = "development",
-					[os.getenv("KEY1")] = os.getenv("VALUE1"),
-					[os.getenv("KEY2")] = os.getenv("VALUE2"),
-					[os.getenv("KEY3")] = os.getenv("VALUE3"),
-					[os.getenv("KEY4")] = os.getenv("VALUE4"),
-				},
+				env = crawler_env,
+				justMyCode = false,
 				-- ... more options, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings
+			})
+			table.insert(require("dap").configurations.python, {
+				type = "python",
+				request = "launch",
+				name = "Debug pytest cur file",
+				module = "pytest",
+				args = { "-vv", "${file}" },
+				env = crawler_env,
+				justMyCode = false,
+			})
+			table.insert(require("dap").configurations.python, {
+				type = "python",
+				request = "launch",
+				name = "Debug scrapy runspider",
+				module = "scrapy",
+				args = { "runspider", "${file}" },
+				justMyCode = false,
 			})
 		end,
 	},
@@ -215,7 +233,7 @@ return {
 				java = "cd $dir && javac $fileName && java $fileNameWithoutExt",
 				c = "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
 				cpp = "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
-				python = "/usr/bin/python3 -u",
+				python = "/opt/homebrew/bin/python3.9 -u",
 				sh = "bash",
 				rust = "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
 				go = "cd $dir && go run $fileName",
