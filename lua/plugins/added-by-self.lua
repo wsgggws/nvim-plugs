@@ -59,9 +59,9 @@ return {
 				desc = "Debug test method",
 			},
 			{
-				"<leader>dc",
+				"<leader>da",
 				"<cmd>lua require('dap-python').test_class()<CR>",
-				desc = "Debug test class",
+				desc = "Debug test  a class",
 			},
 		},
 	},
