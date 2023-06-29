@@ -8,11 +8,15 @@ return {
 		name = "dracula",
 	},
 	{
+		"tanvirtin/monokai.nvim",
+	},
+	{
 		"LazyVim/LazyVim",
 		opts = {
 			-- colorscheme = "catppuccin-mocha",
 			-- colorscheme = "catppuccin",
-			colorscheme = "dracula",
+			-- colorscheme = "koehler",
+			colorscheme = "monokai_ristretto",
 		},
 	},
 }

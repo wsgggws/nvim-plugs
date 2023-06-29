@@ -9,3 +9,5 @@ opt.smartindent = true
 opt.termguicolors = true
 
 vim.fn.sign_define("DapBreakpoint", { text = "🛑", texthl = "", linehl = "", numhl = "" })
+
+vim.g.vista_sidebar_width = 45

@@ -1,4 +1,20 @@
 return {
+
+	{ "christoomey/vim-titlecase" },
+
+	{ "machakann/vim-swap" },
+
+	{ "mhinz/vim-startify" },
+
+	{ "tpope/vim-surround" },
+
+	{
+		"liuchengxu/vista.vim",
+		keys = {
+			{ "<leader>tv", "<cmd>Vista!!<cr>", desc = "Toggle Vista" },
+		},
+	},
+
 	-- debug python
 	{
 		"mfussenegger/nvim-dap",
@@ -144,10 +160,6 @@ return {
 		end,
 	},
 
-	{ "mhinz/vim-startify" },
-
-	{ "tpope/vim-surround" },
-
 	-- markdown support
 	{ "godlygeek/tabular" }, -- required by vim-markdown
 	{ "plasticboy/vim-markdown" },
@@ -176,9 +188,8 @@ return {
 		version = "*",
 		config = true,
 		keys = {
-			{ "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "ToggleTerm" },
-			{ "<leader>th", "<cmd>ToggleTerm direction=horizontal size=14<cr>", desc = "ToggleTerm bottom" },
-			{ "<leader>tv", "<cmd>ToggleTerm direction=vertical size=52<cr>", desc = "ToggleTerm right" },
+			{ "<leader>tt", "<cmd>ToggleTerm direction=horizontal size=18<cr>", desc = "ToggleTerm bottom" },
+			{ "<leader>tr", "<cmd>ToggleTerm direction=vertical size=52<cr>", desc = "ToggleTerm right" },
 			{ "<leader>tl", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "ToggleTerm current line" },
 			{ "<leader>ts", "<cmd>ToggleTermSendVisualSelection<cr>", desc = "ToggleTerm visual selection" },
 			{ "<leader>tT", "<cmd>ToggleTerm direction=tab<cr>", desc = "ToggleTerm tab" },
