@@ -8,3 +8,6 @@ vim.api.nvim_set_keymap("i", "<C-b>", [[<C-o>:normal! ^\s*\<CR>]], { noremap = t
 
 -- 将 Ctrl+e 映射到移至行尾
 vim.api.nvim_set_keymap("i", "<C-e>", "<End>", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("n", "ga", "<Plug>(EasyAlign)", { desc = "EasyAlign text" })
+vim.api.nvim_set_keymap("x", "ga", "<Plug>(EasyAlign)", { desc = "EasyAlign text" })

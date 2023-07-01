@@ -4,6 +4,8 @@ return {
 
 	{ "machakann/vim-swap" },
 
+	{ "junegunn/vim-easy-align" },
+
 	{ "mhinz/vim-startify" },
 
 	{ "tpope/vim-surround" },
@@ -188,7 +190,7 @@ return {
 		version = "*",
 		config = true,
 		keys = {
-			{ "<leader>tt", "<cmd>ToggleTerm direction=horizontal size=18<cr>", desc = "ToggleTerm bottom" },
+			{ "<leader>tt", "<cmd>ToggleTerm direction=horizontal size=16<cr>", desc = "ToggleTerm bottom" },
 			{ "<leader>tr", "<cmd>ToggleTerm direction=vertical size=52<cr>", desc = "ToggleTerm right" },
 			{ "<leader>tl", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "ToggleTerm current line" },
 			{ "<leader>ts", "<cmd>ToggleTermSendVisualSelection<cr>", desc = "ToggleTerm visual selection" },
