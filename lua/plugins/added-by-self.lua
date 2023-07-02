@@ -6,6 +6,29 @@ return {
 
 	{ "junegunn/vim-easy-align" },
 
+	-- { "mg979/vim-visual-multi" },
+
+	{
+		"sindrets/diffview.nvim",
+		keys = {
+			{
+				"<leader>vd",
+				"<cmd>DiffviewOpen<CR>",
+				desc = "DiffviewOpen",
+			},
+			{
+				"<leader>vc",
+				"<cmd>DiffviewClose<CR>",
+				desc = "DiffviewClose",
+			},
+			{
+				"<leader>vh",
+				"<cmd>DiffviewFileHistory %<CR>",
+				desc = "DiffviewFileHistory cur file",
+			},
+		},
+	},
+
 	{ "mhinz/vim-startify" },
 
 	{ "tpope/vim-surround" },
