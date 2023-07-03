@@ -3,6 +3,8 @@ return {
 
 	{ "christoomey/vim-titlecase" },
 
+	{ "ggandor/flit.nvim", enabled = true },
+
 	{ "machakann/vim-swap" },
 
 	{ "junegunn/vim-easy-align" },
