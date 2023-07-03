@@ -1,4 +1,5 @@
 return {
+	{ "farmergreg/vim-lastplace" },
 
 	{ "christoomey/vim-titlecase" },
 
@@ -32,13 +33,6 @@ return {
 	{ "mhinz/vim-startify" },
 
 	{ "tpope/vim-surround" },
-
-	{
-		"liuchengxu/vista.vim",
-		keys = {
-			{ "<leader>tv", "<cmd>Vista!!<cr>", desc = "Toggle Vista" },
-		},
-	},
 
 	-- debug python
 	{

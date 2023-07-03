@@ -12,14 +12,7 @@ return {
 				end
 
 				-- Actions
-				map("n", "<leader>hb", function()
-					gs.blame_line({ full = true })
-				end, { desc = "blame_line" })
 				map("n", "<leader>tb", gs.toggle_current_line_blame, { desc = "toggle_current_line_blame" })
-				map("n", "<leader>hd", gs.diffthis, { desc = "diffthis" })
-				map("n", "<leader>hD", function()
-					gs.diffthis("~")
-				end, { desc = "diff ~" })
 			end,
 		})
 	end,
