@@ -12,7 +12,7 @@ return {
 				end
 
 				-- Actions
-				map("n", "<leader>tb", gs.toggle_current_line_blame, { desc = "toggle_current_line_blame" })
+				map("n", "<leader>gb", gs.toggle_current_line_blame, { desc = "toggle_current_line_blame" })
 			end,
 		})
 	end,

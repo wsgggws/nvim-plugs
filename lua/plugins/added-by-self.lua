@@ -3,6 +3,36 @@ return {
 
 	{ "christoomey/vim-titlecase" },
 
+	{
+		"rmagatti/goto-preview",
+		config = function()
+			require("goto-preview").setup({})
+		end,
+	},
+	{
+		"kevinhwang91/nvim-ufo",
+		dependencies = { "kevinhwang91/promise-async" },
+		config = function()
+			require("ufo").setup()
+		end,
+	},
+	{
+		"nvim-zh/colorful-winsep.nvim",
+		config = true,
+		event = { "WinNew" },
+	},
+	{
+		"booperlv/nvim-gomove",
+		config = function()
+			require("gomove").setup({
+				map_defaults = false,
+				reindent = true,
+				undojoin = true,
+				move_past_end_col = false,
+			})
+		end,
+	},
+
 	{ "ggandor/flit.nvim", enabled = true },
 
 	{ "machakann/vim-swap" },
@@ -15,17 +45,17 @@ return {
 		"sindrets/diffview.nvim",
 		keys = {
 			{
-				"<leader>vd",
+				"<leader>go",
 				"<cmd>DiffviewOpen<CR>",
 				desc = "DiffviewOpen",
 			},
 			{
-				"<leader>vc",
+				"<leader>gq",
 				"<cmd>DiffviewClose<CR>",
 				desc = "DiffviewClose",
 			},
 			{
-				"<leader>vh",
+				"<leader>gf",
 				"<cmd>DiffviewFileHistory %<CR>",
 				desc = "DiffviewFileHistory cur file",
 			},
