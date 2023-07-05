@@ -9,6 +9,7 @@ return {
 			require("goto-preview").setup({})
 		end,
 	},
+
 	{
 		"kevinhwang91/nvim-ufo",
 		dependencies = { "kevinhwang91/promise-async" },
@@ -16,11 +17,13 @@ return {
 			require("ufo").setup()
 		end,
 	},
+
 	{
 		"nvim-zh/colorful-winsep.nvim",
 		config = true,
 		event = { "WinNew" },
 	},
+
 	{
 		"booperlv/nvim-gomove",
 		config = function()

@@ -10,10 +10,10 @@ vim.api.nvim_set_keymap("i", "<C-b>", [[<C-o>:normal! ^\s*\<CR>]], { noremap = t
 vim.api.nvim_set_keymap("i", "<C-e>", "<End>", { noremap = true, silent = true })
 
 -- window resize, 需要确保这快捷键没有被系统占用，否则无效
-vim.api.nvim_set_keymap("n", "<c-s-j>", "<cmd>res +3<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<c-s-k>", "<cmd>res -3<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<c-s-h>", "<cmd>vertical resize -3<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<c-s-l>", "<cmd>vertical resize +3<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<c-s-j>", "<cmd>res +1<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<c-s-k>", "<cmd>res -1<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<c-s-h>", "<cmd>vertical resize -1<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<c-s-l>", "<cmd>vertical resize +1<CR>", { noremap = true, silent = true })
 
 -- for plugin EasyAlign
 vim.api.nvim_set_keymap("n", "ga", "<Plug>(EasyAlign)", { desc = "EasyAlign text" })
