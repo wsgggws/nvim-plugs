@@ -1,5 +1,3 @@
-vim.keymap.set("n", "<C-S>", "<cmd>w<cr>", { noremap = true, desc = "Save File" })
-
 -- 将 Ctrl+a 映射到移至行首
 vim.api.nvim_set_keymap("i", "<C-a>", "<Home>", { noremap = true, silent = true })
 
@@ -20,7 +18,7 @@ vim.api.nvim_set_keymap("n", "ga", "<Plug>(EasyAlign)", { desc = "EasyAlign text
 vim.api.nvim_set_keymap("x", "ga", "<Plug>(EasyAlign)", { desc = "EasyAlign text" })
 
 -- for plugin markdown
-vim.api.nvim_set_keymap("n", "<leader>mp", "<Plug>MarkdownPreviewToggle", { desc = "Markdown Preview Toggle" })
+vim.api.nvim_set_keymap("n", "<leader>pm", "<Plug>MarkdownPreviewToggle", { desc = "Preview Markdown Toggle" })
 
 -- for plugin EasyAlign
 vim.api.nvim_set_keymap("n", "gS", "<Plug>(swap-interactive)", { desc = "<Plug>(swap-interactive)" })
@@ -41,11 +39,11 @@ vim.keymap.set("n", "<leader>Sf", '<cmd>lua require("spectre").open_file_search(
 })
 
 -- for goto-preview
-vim.keymap.set("n", "gpd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", { noremap = true })
-vim.keymap.set("n", "gpt", "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>", { noremap = true })
-vim.keymap.set("n", "gpi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", { noremap = true })
-vim.keymap.set("n", "gpr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>", { noremap = true })
-vim.keymap.set("n", "gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", { noremap = true })
+vim.keymap.set("n", "gld", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", { noremap = true })
+vim.keymap.set("n", "glt", "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>", { noremap = true })
+vim.keymap.set("n", "gli", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", { noremap = true })
+vim.keymap.set("n", "glr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>", { noremap = true })
+vim.keymap.set("n", "gL", "<cmd>lua require('goto-preview').close_all_win()<CR>", { noremap = true })
 
 -- for gomove
 vim.api.nvim_set_keymap("n", "<A-S-h>", "<Plug>GoNSMLeft", {})

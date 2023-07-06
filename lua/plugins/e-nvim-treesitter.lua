@@ -39,6 +39,9 @@ return {
 			ensure_installed = {
 				"python",
 				"go",
+				"gomod",
+				"gowork",
+				"gosum",
 				"rust",
 				"bash",
 				"c",

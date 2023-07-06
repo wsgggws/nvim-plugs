@@ -42,7 +42,7 @@ return {
 
 	{ "junegunn/vim-easy-align" },
 
-	-- { "mg979/vim-visual-multi" },
+	{ "mg979/vim-visual-multi" },
 
 	{
 		"sindrets/diffview.nvim",
@@ -70,71 +70,6 @@ return {
 	{ "tpope/vim-surround" },
 
 	-- debug python
-	{
-		"mfussenegger/nvim-dap",
-		keys = {
-			{
-				"<leader>dd",
-				"<cmd>lua require('dap').toggle_breakpoint()<CR>",
-				desc = "Debug toggle toggle_breakpoint",
-			},
-			-- leader dc 可以直接开始 Debug, Nice
-			{
-				"<leader>dc",
-				"<cmd>lua require('dap').continue()<CR>",
-				desc = "Debug continue",
-			},
-			{
-				"<leader>di",
-				"<cmd>lua require('dap').step_into()<CR>",
-				desc = "Debug step into",
-			},
-			{
-				"<leader>do",
-				"<cmd>lua require('dap').step_out()<CR>",
-				desc = "Debug step out",
-			},
-			{
-				"<leader>dn",
-				"<cmd>lua require('dap').step_over()<CR>",
-				desc = "Debug step next or over",
-			},
-			{
-				"<leader>ds",
-				"<cmd>lua require('dap').close()<CR>",
-				desc = "Debug close",
-			},
-		},
-	},
-	{
-		"theHamsta/nvim-dap-virtual-text",
-		config = function(_, opts)
-			require("nvim-dap-virtual-text").setup(opts)
-		end,
-	},
-	{
-		"rcarriga/nvim-dap-ui",
-		config = function(_, opts)
-			require("dapui").setup(opts)
-		end,
-		keys = {
-			{
-				"<leader>du",
-				"<cmd>lua require('dapui').toggle()<CR>",
-				desc = "Debug toggle UI",
-			},
-			{
-				"<leader>dm",
-				"<cmd>lua require('dap-python').test_method()<CR>",
-				desc = "Debug test method",
-			},
-			{
-				"<leader>da",
-				"<cmd>lua require('dap-python').test_class()<CR>",
-				desc = "Debug test  a class",
-			},
-		},
-	},
 	{
 		"mfussenegger/nvim-dap-python",
 		config = function(_, _)
@@ -182,37 +117,37 @@ return {
 			})
 		end,
 	},
-	{
-		"leoluz/nvim-dap-go",
-		config = function(_, _)
-			require("dap-go").setup({
-				dap_configurations = {
-					{
-						-- Must be "go" or it will be ignored by the plugin
-						type = "go",
-						name = "Attach remote",
-						mode = "remote",
-						request = "attach",
-					},
-				},
-				-- delve configurations
-				delve = {
-					-- the path to the executable dlv which will be used for debugging.
-					-- by default, this is the "dlv" executable on your PATH.
-					path = "dlv",
-					-- time to wait for delve to initialize the debug session.
-					-- default to 20 seconds
-					initialize_timeout_sec = 20,
-					-- a string that defines the port to start delve debugger.
-					-- default to string "${port}" which instructs nvim-dap
-					-- to start the process in a random available port
-					port = "${port}",
-					-- additional args to pass to dlv
-					args = {},
-				},
-			})
-		end,
-	},
+	-- {
+	-- 	"leoluz/nvim-dap-go",
+	-- 	config = function(_, _)
+	-- 		require("dap-go").setup({
+	-- 			dap_configurations = {
+	-- 				{
+	-- 					-- Must be "go" or it will be ignored by the plugin
+	-- 					type = "go",
+	-- 					name = "Attach remote",
+	-- 					mode = "remote",
+	-- 					request = "attach",
+	-- 				},
+	-- 			},
+	-- 			-- delve configurations
+	-- 			delve = {
+	-- 				-- the path to the executable dlv which will be used for debugging.
+	-- 				-- by default, this is the "dlv" executable on your PATH.
+	-- 				path = "dlv",
+	-- 				-- time to wait for delve to initialize the debug session.
+	-- 				-- default to 20 seconds
+	-- 				initialize_timeout_sec = 20,
+	-- 				-- a string that defines the port to start delve debugger.
+	-- 				-- default to string "${port}" which instructs nvim-dap
+	-- 				-- to start the process in a random available port
+	-- 				port = "${port}",
+	-- 				-- additional args to pass to dlv
+	-- 				args = {},
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 
 	-- markdown support
 	{ "godlygeek/tabular" }, -- required by vim-markdown
@@ -242,11 +177,11 @@ return {
 		version = "*",
 		config = true,
 		keys = {
-			{ "<leader>tt", "<cmd>ToggleTerm direction=horizontal size=16<cr>", desc = "ToggleTerm bottom" },
-			{ "<leader>tr", "<cmd>ToggleTerm direction=vertical size=52<cr>", desc = "ToggleTerm right" },
-			{ "<leader>tl", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "ToggleTerm current line" },
-			{ "<leader>ts", "<cmd>ToggleTermSendVisualSelection<cr>", desc = "ToggleTerm visual selection" },
-			{ "<leader>tT", "<cmd>ToggleTerm direction=tab<cr>", desc = "ToggleTerm tab" },
+			{ "<leader>ft", "<cmd>ToggleTerm direction=horizontal size=18<cr>", desc = "ToggleTerm bottom" },
+			{ "<leader>fT", "<cmd>ToggleTerm direction=tab<cr>", desc = "ToggleTerm tab" },
+			{ "<leader>fl", "<cmd>ToggleTerm direction=vertical size=66<cr>", desc = "ToggleTerm right" },
+			{ "<leader>fc", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "ToggleTerm current line" },
+			{ "<leader>fs", "<cmd>ToggleTermSendVisualSelection<cr>", desc = "ToggleTerm visual selection" },
 		},
 	},
 

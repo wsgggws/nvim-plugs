@@ -17,9 +17,9 @@ return {
 				"gopls",
 				"gotests",
 				"go-debug-adapter",
+				"delve",
 
 				"rust-analyzer",
-				"rustfmt",
 
 				"clangd",
 				"clang-format",
