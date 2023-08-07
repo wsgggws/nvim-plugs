@@ -1,1 +1,0 @@
-return { "mhinz/vim-startify" }
