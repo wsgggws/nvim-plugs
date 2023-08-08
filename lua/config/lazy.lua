@@ -24,13 +24,13 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.rust" },
 		{ import = "lazyvim.plugins.extras.editor.leap" },
 		{ import = "lazyvim.plugins.extras.coding.copilot" },
-		{ import = "lazyvim.plugins.extras.ui.mini-animate" },
 		{ import = "lazyvim.plugins.extras.lang.go" },
 
 		-- import/override with your plugins
 		-- { import = "lazyvim.plugins.extras.lang.typescript" },
 		-- { import = "lazyvim.plugins.extras.lang.python" },
 		-- { import = "lazyvim.plugins.extras.ui.edgy" },
+		-- { import = "lazyvim.plugins.extras.ui.mini-animate" },
 		-- { import = "plugins.default" },
 		-- { import = "plugins.write" },
 		{ import = "plugins.ui" },

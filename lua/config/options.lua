@@ -5,7 +5,7 @@ opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.autoindent = true
 opt.smartindent = true
-opt.cursorline = false
+-- opt.cursorline = false
 opt.termguicolors = true
 
 vim.g.vista_sidebar_width = 45
