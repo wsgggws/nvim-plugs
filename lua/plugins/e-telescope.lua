@@ -7,6 +7,11 @@ return {
 			build = "make",
 			config = function()
 				require("telescope").load_extension("fzf")
+				require("telescope").setup({
+					defaults = {
+						file_ignore_patterns = { "%.git/", "COMMIT_EDITMSG" },
+					},
+				})
 			end,
 		},
 		keys = {

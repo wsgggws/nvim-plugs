@@ -8,4 +8,7 @@ return {
 			vim.fn["mkdp#util#install"]()
 		end,
 	},
+	{
+		"mzlogin/vim-markdown-toc",
+	},
 }
