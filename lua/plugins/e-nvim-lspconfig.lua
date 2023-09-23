@@ -3,7 +3,7 @@ return {
 	opts = {
 		diagnostics = {
 			-- 不在当前行以虚拟文本形式显示错误信息
-			underline = false,
+			underline = true,
 			virtual_text = false,
 		},
 		setup = {
