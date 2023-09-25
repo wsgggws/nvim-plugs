@@ -4,6 +4,7 @@ return {
 		opts = {
 			ensure_installed = {
 
+				"autopep8",
 				"flake8",
 				"isort",
 				"black",
