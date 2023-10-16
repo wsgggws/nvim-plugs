@@ -24,6 +24,7 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.editor.leap" },
 		{ import = "lazyvim.plugins.extras.coding.copilot" },
 		{ import = "lazyvim.plugins.extras.lang.go" },
+		{ import = "lazyvim.plugins.extras.lsp.none-ls" },
 		{ import = "plugins.ui" },
 		{ import = "plugins.addedbyself" },
 		{ import = "plugins" },
