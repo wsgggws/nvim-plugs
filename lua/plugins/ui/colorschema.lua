@@ -11,7 +11,7 @@ return {
 			-- colorscheme = "koehler",
 			-- colorscheme = "monokai_ristretto",
 			-- colorscheme = "gruvbox",
-			-- colorscheme = "catppuccin",
+			-- colorscheme = "catppuccin-latte",
 			colorscheme = "tokyonight-day",
 		},
 	},
