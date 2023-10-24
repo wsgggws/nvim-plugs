@@ -12,7 +12,7 @@ return {
 			-- colorscheme = "monokai_ristretto",
 			-- colorscheme = "gruvbox",
 			-- colorscheme = "catppuccin-latte",
-			colorscheme = "tokyonight-day",
+			colorscheme = "tokyonight-night",
 		},
 	},
 }
