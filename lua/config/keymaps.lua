@@ -43,7 +43,9 @@ vim.keymap.set("n", "gld", "<cmd>lua require('goto-preview').goto_preview_defini
 vim.keymap.set("n", "glt", "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>", { noremap = true })
 vim.keymap.set("n", "gli", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", { noremap = true })
 vim.keymap.set("n", "glr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>", { noremap = true })
-vim.keymap.set("n", "gL", "<cmd>lua require('goto-preview').close_all_win()<CR>", { noremap = true })
+vim.keymap.set("n", "glD", "<cmd>lua require('goto-preview').goto_preview_declaration()<CR>", { noremap = true })
+vim.keymap.set("n", "glq", "<cmd>lua require('goto-preview').close_all_win()<CR>", { noremap = true })
+vim.keymap.set("n", "q", "<cmd>lua require('goto-preview').close_all_win()<CR>", { noremap = true })
 
 -- for gomove
 vim.api.nvim_set_keymap("n", "<A-S-h>", "<Plug>GoNSMLeft", {})
