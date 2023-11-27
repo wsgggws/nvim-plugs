@@ -14,3 +14,6 @@ vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
 vim.wo.colorcolumn = "120"
+
+-- for winresizer
+vim.g.winresizer_vert_resize = 3
