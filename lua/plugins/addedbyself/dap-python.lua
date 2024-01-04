@@ -2,6 +2,9 @@ return {
 	"mfussenegger/nvim-dap-python",
 	config = function(_, _)
 		require("dap-python").setup(os.getenv("MYPYTHON"))
+		require("dap-python").resolve_python = function()
+			return os.getenv("MYPYTHON")
+		end
 		-- require("dap-python").setup("/opt/homebrew/bin/python3.9")
 		local crawler_env = {
 			["PYTHONPATH"] = ".:crawler",
