@@ -1,9 +1,7 @@
 -- 将 Ctrl+l 映射到移至行首
 vim.api.nvim_set_keymap("i", "<C-l>", "<Home>", { noremap = true, silent = true })
-
 -- 将 Ctrl+a 映射到移至行第一个非空白字符处
 vim.api.nvim_set_keymap("i", "<C-a>", [[<C-o>:normal! ^\s*\<CR>]], { noremap = true, silent = true })
-
 -- 将 Ctrl+e 映射到移至行尾
 vim.api.nvim_set_keymap("i", "<C-e>", "<End>", { noremap = true, silent = true })
 
@@ -20,7 +18,7 @@ vim.api.nvim_set_keymap("x", "ga", "<Plug>(EasyAlign)", { desc = "EasyAlign text
 -- for plugin markdown
 vim.api.nvim_set_keymap("n", "<leader>pm", "<Plug>MarkdownPreviewToggle", { desc = "Preview Markdown Toggle" })
 
--- for plugin EasyAlign
+-- for plugin vim-swap
 vim.api.nvim_set_keymap("n", "gS", "<Plug>(swap-interactive)", { desc = "<Plug>(swap-interactive)" })
 vim.api.nvim_set_keymap("x", "gS", "<Plug>(swap-interactive)", { desc = "<Plug>(swap-interactive)" })
 
