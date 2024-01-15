@@ -1,1 +1,3 @@
-return { "machakann/vim-swap" }
+return {
+	"machakann/vim-swap",
+}
