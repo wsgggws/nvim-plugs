@@ -11,16 +11,8 @@ vim.api.nvim_set_keymap("n", "<c-s-k>", "<cmd>res -1<CR>", { noremap = true, sil
 vim.api.nvim_set_keymap("n", "<c-s-h>", "<cmd>vertical resize -1<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<c-s-l>", "<cmd>vertical resize +1<CR>", { noremap = true, silent = true })
 
--- for plugin EasyAlign
-vim.api.nvim_set_keymap("n", "ga", "<Plug>(EasyAlign)", { desc = "EasyAlign text" })
-vim.api.nvim_set_keymap("x", "ga", "<Plug>(EasyAlign)", { desc = "EasyAlign text" })
-
 -- for plugin markdown
 vim.api.nvim_set_keymap("n", "<leader>pm", "<Plug>MarkdownPreviewToggle", { desc = "Preview Markdown Toggle" })
-
--- for plugin vim-swap
-vim.api.nvim_set_keymap("n", "gS", "<Plug>(swap-interactive)", { desc = "<Plug>(swap-interactive)" })
-vim.api.nvim_set_keymap("x", "gS", "<Plug>(swap-interactive)", { desc = "<Plug>(swap-interactive)" })
 
 -- for spectre
 vim.keymap.set("n", "<leader>So", '<cmd>lua require("spectre").open()<CR>', {
