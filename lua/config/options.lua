@@ -22,3 +22,6 @@ vim.wo.colorcolumn = "120"
 
 -- for winresizer
 vim.g.winresizer_vert_resize = 3
+
+-- for open-browser
+vim.g.netrw_nogx = 1
