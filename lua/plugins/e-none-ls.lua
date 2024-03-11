@@ -13,8 +13,6 @@ return {
 			table.insert(opts.sources, nls.builtins.formatting.goimports_reviser)
 			table.insert(opts.sources, nls.builtins.code_actions.gomodifytags)
 
-			table.insert(opts.sources, nls.builtins.formatting.rustfmt)
-
 			table.insert(opts.sources, nls.builtins.formatting.shfmt)
 
 			table.insert(opts.sources, nls.builtins.formatting.clang_format)

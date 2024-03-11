@@ -12,6 +12,11 @@ return {
 		},
 	},
 	{
+		"polirritmico/monokai-nightasty.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+	{
 		"LazyVim/LazyVim",
 		opts = {
 			-- colorscheme = "dracula",
@@ -20,9 +25,10 @@ return {
 			-- colorscheme = "koehler",
 			-- colorscheme = "monokai_ristretto",
 			-- colorscheme = "gruvbox",
+			-- colorscheme = "tokyonight-night",
+			colorscheme = "tokyonight-day",
+			-- colorscheme = "monokai-nightasty",
 			-- colorscheme = "catppuccin-latte",
-			-- colorscheme = "tokyonight-day",
-			colorscheme = "tokyonight-night",
 		},
 	},
 }
