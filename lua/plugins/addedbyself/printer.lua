@@ -42,8 +42,8 @@ return {
 			},
 
 			vim.keymap.set({ "n", "v" }, "gp", "<Plug>(printer_below)", { desc = "Print Below" }),
-			vim.keymap.set("n", "gP", "<Plug>(printer_print)iw", { desc = "Print current word" }),
-			vim.keymap.set("n", "gL", "<Plug>(printer_print)iW", { desc = "Print current WORD" }),
+			vim.keymap.set("n", "<leader>pw", "<Plug>(printer_print)iw", { desc = "Print current word" }),
+			vim.keymap.set("n", "<leader>pW", "<Plug>(printer_print)iW", { desc = "Print current WORD" }),
 		})
 	end,
 }
