@@ -3,15 +3,20 @@ return {
 	event = "VimEnter",
 	opts = function()
 		local logo = [[
-                                       
         (Go)                 (Python)  
           (AI)             (IoT)       
             (OS)         (Browser)     
-                                       
                 码码冇得空             
+             _.---._    /\\            
+           ./'       "--`\//           
+         ./              o \           
+        /./\  )______   \__ \          
+       ./  / /\ \   | \ \  \ \         
+          / /  \ \  | |\ \  \7         
+           "     "    "  "             
         ]]
 
-		logo = string.rep("\n", 8) .. logo .. "\n\n"
+		logo = string.rep("\n", 2) .. logo .. "\n\n"
 
 		local opts = {
 			theme = "doom",

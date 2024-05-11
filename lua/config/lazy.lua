@@ -30,6 +30,8 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.test.core" },
 		{ import = "lazyvim.plugins.extras.coding.copilot" },
 		{ import = "lazyvim.plugins.extras.lsp.none-ls" },
+		-- { import = "lazyvim.plugins.extras.ui.mini-animate" },
+		-- { import = "lazyvim.plugins.extras.coding.native_snippets" },
 		{ import = "plugins.ui" },
 		{ import = "plugins.addedbyself" },
 		{ import = "plugins" },
@@ -43,7 +45,7 @@ require("lazy").setup({
 		version = false, -- always use the latest git commit
 		-- version = "*", -- try installing the latest stable version for plugins that support semver
 	},
-	install = { colorscheme = { "tokyonight-day" } },
+	install = { colorscheme = { "catppuccin-macchiato" } },
 	checker = { enabled = true }, -- automatically check for plugin updates
 	performance = {
 		rtp = {
