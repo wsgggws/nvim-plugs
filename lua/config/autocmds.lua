@@ -13,3 +13,10 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 		vim.b.autoformat = false
 	end,
 })
+
+vim.api.nvim_create_autocmd({ "ExitPre" }, {
+	callback = function()
+		-- vim.opt.guicursor = "a:ver25-blinkon250-blinkoff400-blinkwait700"
+		vim.opt.guicursor = "a:hor25-blinkon250-blinkoff400-blinkwait700"
+	end,
+})
