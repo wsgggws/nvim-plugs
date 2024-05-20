@@ -2,6 +2,6 @@ return {
 	"axkirillov/hbac.nvim",
 	config = true,
 	opts = {
-		threshold = 7,
+		threshold = 8,
 	},
 }

@@ -3,7 +3,6 @@ return {
 	event = "VimEnter",
 	opts = function()
 		local logo = [[
-
         (Go)                 (Python)  
           (AI)             (IoT)       
             (OS)         (Browser)     
@@ -18,7 +17,7 @@ return {
            "     "    "  "             
         ]]
 
-		logo = string.rep("\n", 3) .. logo .. "\n\n"
+		logo = string.rep("\n", 2) .. logo .. "\n\n"
 
 		local opts = {
 			theme = "doom",
@@ -29,18 +28,18 @@ return {
 			},
 			config = {
 				header = vim.split(logo, "\n"),
-                -- stylua: ignore
-                center = {
-                    { action = LazyVim.telescope("files"),                                    desc = " Find File",       icon = " ", key = "f" },
-                    { action = "ene | startinsert",                                        desc = " New File",        icon = " ", key = "n" },
-                    { action = "Telescope oldfiles",                                       desc = " Recent Files",    icon = " ", key = "r" },
-                    { action = "Telescope live_grep",                                      desc = " Find Text",       icon = " ", key = "g" },
-                    { action = [[lua LazyVim.telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
-                    { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = " ", key = "s" },
-                    { action = "LazyExtras",                                               desc = " Lazy Extras",     icon = " ", key = "x" },
-                    { action = "Lazy",                                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
-                    { action = "qa",                                                       desc = " Quit",            icon = " ", key = "q" },
-                },
+		              -- stylua: ignore
+		              center = {
+		                  { action = LazyVim.telescope("files"),                 desc = " Find File",       icon = " ", key = "f" },
+		                  { action = "ene | startinsert",                        desc = " New File",        icon = " ", key = "n" },
+		                  { action = "Telescope oldfiles",                       desc = " Recent Files",    icon = " ", key = "r" },
+		                  { action = "Telescope live_grep",                      desc = " Find Text",       icon = " ", key = "g" },
+		                  { action = [[lua LazyVim.telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
+		                  { action = 'lua require("persistence").load()',        desc = " Restore Session", icon = " ", key = "s" },
+		                  { action = "LazyExtras",                               desc = " Lazy Extras",     icon = " ", key = "x" },
+		                  { action = "Lazy",                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
+		                  { action = "qa",                                       desc = " Quit",            icon = " ", key = "q" },
+		              },
 				footer = function()
 					local stats = require("lazy").stats()
 					local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)

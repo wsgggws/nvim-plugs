@@ -43,12 +43,6 @@ return {
 			mode = { "v" },
 			desc = "Visual Selection to New File",
 		},
-		{
-			"<leader>fx",
-			"<cmd>lua require('genghis').chmodx()<CR>",
-			mode = { "n" },
-			desc = "File chmod +x",
-		},
 	},
 	dependencies = "stevearc/dressing.nvim",
 }

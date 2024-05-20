@@ -8,15 +8,15 @@ opt.smartindent = true
 opt.termguicolors = true
 
 -- for floder
-vim.o.foldcolumn = "1" -- '0' is not bad
-vim.o.foldlevel = 99 -- feel free to decrease the value
-vim.o.foldlevelstart = 99
-vim.o.foldenable = true
+-- vim.o.foldcolumn = "1" -- '0' is not bad
+-- vim.o.foldlevel = 99 -- feel free to decrease the value
+-- vim.o.foldlevelstart = 99
+-- vim.o.foldenable = true
 
-vim.o.background = "light"
-if os.getenv("TERM_PROGRAM") == "iTerm.app" then
-	vim.o.background = "dark"
-end
+-- vim.o.background = "light"
+-- if os.getenv("TERM_PROGRAM") == "iTerm.app" then
+-- 	vim.o.background = "dark"
+-- end
 
 vim.wo.colorcolumn = "120"
 
@@ -25,3 +25,6 @@ vim.g.winresizer_vert_resize = 3
 
 -- for open-browser
 vim.g.netrw_nogx = 1
+
+vim.g.lazyvim_python_lsp = "pyright"
+vim.g.lazyvim_python_ruff = ""

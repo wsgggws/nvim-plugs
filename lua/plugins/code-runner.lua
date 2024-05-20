@@ -6,7 +6,7 @@ return {
 		{ "<leader>rq", "<cmd>RunClose<cr>", desc = "Run Quite" },
 		{ "<ESC>", "<cmd>RunClose<cr>", desc = "Run Quite" },
 	},
-	config = {
+	opts = {
 		-- mode: Mode in which you want to run. Are supported: "better_term", "float", "tab", "toggleterm" (type: bool)
 		mode = "term",
 		-- Focus on runner window(only works on toggle, term and tab mode)
@@ -17,7 +17,7 @@ return {
 			--  Position to open the terminal, this option is ignored if mode is tab
 			position = "bot",
 			-- window size, this option is ignored if tab is true
-			size = 15,
+			size = 16,
 		},
 		filetype = {
 			c = "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",

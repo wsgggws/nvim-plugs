@@ -7,6 +7,6 @@ return {
 		{ "<leader>fT", "<cmd>ToggleTerm direction=tab<cr>", desc = "ToggleTerm tab" },
 		{ "<leader>fl", "<cmd>ToggleTerm direction=vertical size=89<cr>", desc = "ToggleTerm right" },
 		{ "<leader>fc", "<cmd>ToggleTermSendCurrentLine<cr>", desc = "ToggleTerm current line" },
-		{ "<leader>fs", "<cmd>ToggleTermSendVisualSelection<cr>", desc = "ToggleTerm visual selection" },
+		{ "<leader>fv", "<cmd>ToggleTermSendVisualSelection<cr>", desc = "ToggleTerm visual selection" },
 	},
 }
