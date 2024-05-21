@@ -25,6 +25,3 @@ vim.g.winresizer_vert_resize = 3
 
 -- for open-browser
 vim.g.netrw_nogx = 1
-
-vim.g.lazyvim_python_lsp = "pyright"
-vim.g.lazyvim_python_ruff = ""
