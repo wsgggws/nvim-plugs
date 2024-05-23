@@ -14,6 +14,9 @@ vim.api.nvim_set_keymap("n", "<c-s-l>", "<cmd>vertical resize +2<CR>", { noremap
 -- for plugin markdown
 vim.api.nvim_set_keymap("n", "<leader>vm", "<Plug>MarkdownPreviewToggle", { desc = "View Markdown Toggle" })
 
+-- for undotree
+vim.api.nvim_set_keymap("n", "<leader>uu", "<cmd>UndotreeToggle<cr>", { desc = "Undotree Toggle" })
+
 -- for goto-preview
 -- vim.keymap.set("n", "gld", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", { noremap = true })
 -- vim.keymap.set("n", "glt", "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>", { noremap = true })
