@@ -1,19 +1,17 @@
 return {
 	"linux-cultist/venv-selector.nvim",
+	dependencies = {
+		"neovim/nvim-lspconfig",
+		"mfussenegger/nvim-dap",
+		"mfussenegger/nvim-dap-python", --optional
+		{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
+	},
 	lazy = false,
-	cmd = { "VenvSelect", "VenvSelectCached", "VenvSelectCurrent" },
-	opts = function(_, opts)
-		return vim.tbl_deep_extend("force", opts, {
-			name = {
-				"virtualenvs",
-			},
-			poetry_path = os.getenv("HOME") .. "/Library/Caches/pypoetry/virtualenvs",
-			notify_user_on_activate = false,
-		})
+	branch = "regexp", -- This is the regexp branch, use this for the new version
+	config = function()
+		require("venv-selector").setup()
 	end,
 	keys = {
-		{ "<leader>cv", "<cmd>VenvSelect<cr>", desc = "Select VirtualEnv" },
-		{ "<leader>vs", "<cmd>VenvSelectCached<cr>", desc = "Cache VirtualEnv" },
-		{ "<leader>vc", "<cmd>VenvSelectCached<cr>", desc = "Current VirtualEnv" },
+		{ ",v", "<cmd>VenvSelect<cr>" },
 	},
 }

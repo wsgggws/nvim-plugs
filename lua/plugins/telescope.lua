@@ -33,7 +33,7 @@ return {
 						preview_width = 0.6,
 						preview_cutoff = 30,
 					},
-					width = { padding = 2 },
+					width = { padding = 5 },
 					height = { padding = 2 },
 				},
 			},
