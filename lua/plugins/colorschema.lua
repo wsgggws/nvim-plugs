@@ -7,10 +7,17 @@ return {
 		},
 	},
 	{
+		"folke/tokyonight.nvim",
+	},
+	{
+		"morhetz/gruvbox",
+	},
+	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "catppuccin-mocha",
-			-- colorscheme = "catppuccin",
+			-- colorscheme = "tokyonight-day",
+			-- colorscheme = "catppuccin-mocha",
+			colorscheme = "gruvbox",
 		},
 	},
 }

@@ -17,7 +17,7 @@ return {
 			--  Position to open the terminal, this option is ignored if mode is tab
 			position = "bot",
 			-- window size, this option is ignored if tab is true
-			size = 16,
+			size = 15,
 		},
 		filetype = {
 			c = "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",

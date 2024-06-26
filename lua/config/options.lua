@@ -13,10 +13,12 @@ opt.termguicolors = true
 -- vim.o.foldlevelstart = 99
 -- vim.o.foldenable = true
 
--- vim.o.background = "light"
--- if os.getenv("TERM_PROGRAM") == "iTerm.app" then
--- 	vim.o.background = "dark"
--- end
+opt.background = "light"
+vim.g.gruvbox_termcolors = 16
+vim.g.gruvbox_contrast_light = "soft"
+if os.getenv("TERM_PROGRAM") == "iTerm.app" then
+	opt.background = "dark"
+end
 
 vim.wo.colorcolumn = "120"
 
