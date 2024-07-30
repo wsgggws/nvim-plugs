@@ -3,11 +3,14 @@ return {
 		"catppuccin/nvim",
 		name = "catppuccin",
 		opts = {
-			transparent_background = true,
+			flavour = "latte",
 		},
 	},
 	{
 		"folke/tokyonight.nvim",
+		opts = {
+			style = "day",
+		},
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
@@ -23,16 +26,25 @@ return {
 			},
 		},
 	},
-	-- {
-	-- 	"sainnhe/gruvbox-material",
-	-- },
+
+	{
+		"fynnfluegge/monet.nvim",
+		name = "monet",
+	},
 	{
 		"LazyVim/LazyVim",
-		opts = {
-			-- colorscheme = "tokyonight-day",
-			-- colorscheme = "catppuccin-mocha",
-			-- colorscheme = "gruvbox-material",
-			colorscheme = "gruvbox",
-		},
+		opts = function()
+			local colorscheme = "gruvbox"
+			-- local colorscheme = "tokyonight-day",
+			-- local colorscheme = "catppuccin-mocha",
+			-- local colorscheme = "gruvbox-material",
+			-- local colorscheme = "monet",
+			if os.getenv("TERM_PROGRAM") == "WezTerm" then
+				colorscheme = "catppuccin"
+			end
+			return {
+				colorscheme = colorscheme,
+			}
+		end,
 	},
 }
