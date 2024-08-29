@@ -26,10 +26,12 @@ return {
 			},
 		},
 	},
-
 	{
-		"fynnfluegge/monet.nvim",
-		name = "monet",
+		"dracula/vim",
+		name = "dracula",
+	},
+	{
+		"maxmx03/solarized.nvim",
 	},
 	{
 		"LazyVim/LazyVim",
@@ -38,9 +40,11 @@ return {
 			-- local colorscheme = "tokyonight-day",
 			-- local colorscheme = "catppuccin-mocha",
 			-- local colorscheme = "gruvbox-material",
-			-- local colorscheme = "monet",
 			if os.getenv("TERM_PROGRAM") == "WezTerm" then
-				colorscheme = "catppuccin"
+				colorscheme = "solarized"
+				-- colorscheme = "dracula"
+				-- colorscheme = "gruvbox"
+				-- colorscheme = "catppuccin"
 			end
 			return {
 				colorscheme = colorscheme,
