@@ -22,7 +22,7 @@ return {
 		filetype = {
 			c = "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
 			go = "cd $dir && go run $fileName",
-			python = "/usr/local/bin/python3 -u",
+			python = "python -u",
 			javascript = "node",
 			java = "cd $dir && javac $fileName && java $fileNameWithoutExt",
 			cpp = "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",

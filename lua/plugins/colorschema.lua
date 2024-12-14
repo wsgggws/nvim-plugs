@@ -3,7 +3,7 @@ return {
 		"catppuccin/nvim",
 		name = "catppuccin",
 		opts = {
-			flavour = "latte",
+			flavour = "mocha",
 		},
 	},
 	{
@@ -41,10 +41,10 @@ return {
 			-- local colorscheme = "catppuccin-mocha",
 			-- local colorscheme = "gruvbox-material",
 			if os.getenv("TERM_PROGRAM") == "WezTerm" then
-				colorscheme = "solarized"
+				-- colorscheme = "solarized"
 				-- colorscheme = "dracula"
 				-- colorscheme = "gruvbox"
-				-- colorscheme = "catppuccin"
+				colorscheme = "catppuccin"
 			end
 			return {
 				colorscheme = colorscheme,
