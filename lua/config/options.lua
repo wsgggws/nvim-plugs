@@ -13,10 +13,13 @@ opt.termguicolors = true
 -- vim.o.foldlevelstart = 99
 -- vim.o.foldenable = true
 
-opt.background = "dark"
-if os.getenv("TERM_PROGRAM") == "iTerm.app" then
-	opt.background = "dark"
-end
+-- opt.background = "dark"
+-- if os.getenv("TERM_PROGRAM") == "iTerm.app" then
+-- 	opt.background = "light"
+-- end
+-- if os.getenv("TERM_PROGRAM") == "ghostty" then
+-- 	opt.background = "dark"
+-- end
 
 vim.wo.colorcolumn = "120"
 

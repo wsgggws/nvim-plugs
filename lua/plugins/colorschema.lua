@@ -9,7 +9,7 @@ return {
 	{
 		"folke/tokyonight.nvim",
 		opts = {
-			style = "day",
+			-- style = "ni",
 		},
 	},
 	{
@@ -44,7 +44,8 @@ return {
 				-- colorscheme = "solarized"
 				-- colorscheme = "dracula"
 				-- colorscheme = "gruvbox"
-				colorscheme = "catppuccin"
+				colorscheme = "tokyonight-night"
+				-- colorscheme = "catppuccin"
 			end
 			return {
 				colorscheme = colorscheme,
