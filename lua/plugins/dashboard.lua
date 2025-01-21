@@ -5,7 +5,7 @@ return {
 		lazy = false, -- As https://github.com/nvimdev/dashboard-nvim/pull/450, dashboard-nvim shouldn't be lazy-loaded to properly handle stdin.
 		opts = function()
 			local logo = [[
-                码码冇得空             
+                码码要洗手             
                                        
              _.---._    /\\            
            ./'       "--`\//           

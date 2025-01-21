@@ -7,12 +7,12 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "FileType" }, {
-	pattern = { "toml", "yaml" },
-	callback = function()
-		vim.b.autoformat = false
-	end,
-})
+-- vim.api.nvim_create_autocmd({ "FileType" }, {
+-- 	pattern = { "toml", "yaml" },
+-- 	callback = function()
+-- 		vim.b.autoformat = false
+-- 	end,
+-- })
 
 vim.api.nvim_create_autocmd({ "ExitPre" }, {
 	callback = function()

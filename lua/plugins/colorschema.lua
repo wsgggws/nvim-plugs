@@ -44,8 +44,8 @@ return {
 				-- colorscheme = "solarized"
 				-- colorscheme = "dracula"
 				-- colorscheme = "gruvbox"
-				colorscheme = "tokyonight-night"
-				-- colorscheme = "catppuccin"
+				-- colorscheme = "tokyonight-night"
+				colorscheme = "catppuccin"
 			end
 			return {
 				colorscheme = colorscheme,
