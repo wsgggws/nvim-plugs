@@ -7,12 +7,6 @@ opt.autoindent = true
 opt.smartindent = true
 opt.termguicolors = true
 
--- for floder
--- vim.o.foldcolumn = "1" -- '0' is not bad
--- vim.o.foldlevel = 99 -- feel free to decrease the value
--- vim.o.foldlevelstart = 99
--- vim.o.foldenable = true
-
 -- opt.background = "dark"
 -- if os.getenv("TERM_PROGRAM") == "iTerm.app" then
 -- 	opt.background = "light"
